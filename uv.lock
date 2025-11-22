@@ -228,7 +228,10 @@ dependencies = [
     { name = "aiomqtt" },
     { name = "cachetools" },
     { name = "defusedxml" },
+    { name = "maturin" },
+    { name = "maturin-import-hook" },
     { name = "orjson" },
+    { name = "pytest" },
 ]
 
 [package.dev-dependencies]
@@ -277,7 +280,10 @@ requires-dist = [
     { name = "aiomqtt", specifier = ">=2.5.0,<3.0" },
     { name = "cachetools", specifier = ">=5.0.0,<8.0" },
     { name = "defusedxml", specifier = ">=0.7.1" },
+    { name = "maturin", specifier = ">=1.9.6" },
+    { name = "maturin-import-hook", specifier = ">=0.3.0" },
     { name = "orjson", specifier = ">=3.11.3" },
+    { name = "pytest", specifier = ">=8.4.2" },
 ]
 
 [package.metadata.requires-dev]

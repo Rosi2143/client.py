@@ -6,6 +6,8 @@ import asyncio
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Final
 
+import maturin_import_hook
+
 from deebot_client.events.map import CachedMapInfoEvent, MapChangedEvent
 
 from .events import (
@@ -23,8 +25,10 @@ from .events import (
 from .exceptions import MapError
 from .logging_filter import get_logger
 from .models import Room
-from .rs.map import MapData as MapDataRs, RotationAngle
-from .util import (
+
+maturin_import_hook.reset_logger()
+from .rs.map import MapData as MapDataRs, RotationAngle  # noqa: E402
+from .util import (  # noqa: E402
     OnChangedDict,
 )
 

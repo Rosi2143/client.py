@@ -291,6 +291,8 @@ class _AuthClient:
             )
 
             try:
+                if self._config.session.closed:
+                    raise ApiError("Session is closed")
                 async with self._config.session.post(
                     url,
                     json=json,
