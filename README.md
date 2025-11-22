@@ -84,10 +84,20 @@ async def main():
         await bot.execute_command(Charge())
 
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.create_task(main())
     loop.run_forever()
+=======
+if __name__ == '__main__':
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass
+>>>>>>> 02da32e (README: Fix depracation warning in example code)
 ```
 
 A more advanced example can be found [here](https://github.com/And3rsL/Deebot-for-Home-Assistant).
